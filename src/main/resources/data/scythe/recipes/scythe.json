@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#ii",
+    "#/ ",
+    " / "
+  ],
+  "key": {
+    "#": {
+      "item": "scythe:rose_gold"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "scythe:scythe",
+    "count": 1
+  }
+}
