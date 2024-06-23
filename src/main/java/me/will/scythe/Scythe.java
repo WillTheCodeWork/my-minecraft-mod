@@ -1,6 +1,7 @@
 package me.will.scythe;
 
 import com.mojang.logging.LogUtils;
+import me.will.scythe.item.ModCreativeModeTabs;
 import me.will.scythe.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -27,6 +28,7 @@ public class Scythe {
     private static final Logger LOGGER = LogUtils.getLogger();
     public Scythe() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -49,6 +51,8 @@ public class Scythe {
     {
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.scythe_item);
+        } else if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.rose_gold);
         }
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
