@@ -17,7 +17,7 @@ public class ModItems {
             ITEMS.register("scythe", () -> new SwordItem(new Tier() {
                 @Override
                 public int getUses() {
-                    return 200;
+                    return 3;
                 }
 
                 @Override
@@ -44,7 +44,9 @@ public class ModItems {
                 public Ingredient getRepairIngredient() {
                     return null;
                 }
-            }, 999999999, -1f, new Item.Properties()));
+            }, 2147483647, -3.5f, new Item.Properties()));
+    public static final RegistryObject<Item> rose_gold =
+            ITEMS.register("rose_gold", () -> new Item(new Item.Properties()));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
