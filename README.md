@@ -1,2 +1,2 @@
-# scythe mod
-a simple mod based around adding a scythe to minecraft
+# randome mod
+A mod for me just to test some stuff out
